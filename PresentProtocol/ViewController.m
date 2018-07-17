@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ViewController2.h"
+#import "UIViewController+JLPresent.h"
 
 #import "TransitioningHelp.h"
 
@@ -38,19 +39,20 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
     
 }
-
 - (void)btnClick
 {
     ViewController2 *vc = [[ViewController2 alloc] init];
-
+//
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     nav.navigationBar.backgroundColor = [UIColor redColor];
-    
+//
     //必须持有这个helper
-    self.helper = [[TransitioningHelp alloc] initWithViewController:nav andModel:1];
-
-    [self presentViewController:nav animated:YES completion:nil];
+//    self.helper = [[TransitioningHelp alloc] initWithViewController:nav andModel:1];
+//
+//    [self presentViewController:nav animated:YES completion:nil];
+    [self jl_presentViewController:nav];
     
+
 }
 
 
