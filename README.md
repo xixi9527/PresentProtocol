@@ -14,4 +14,3 @@
 [self jl_presentViewController:nav];
 
 
-#注意保存Help 对象
